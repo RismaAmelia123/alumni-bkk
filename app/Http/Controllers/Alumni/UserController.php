@@ -63,6 +63,7 @@ class UserController extends Controller
 
     function add_lamaran($id){
         $data ['lowongan'] = Lowongan::find($id);
+        $data ['alumni'] = Alumni::where('nisn', Auth()->guard('alumnis')->id())->get();
         return view('Alumni.Lamaran.lamaran', $data);
     }
 
@@ -75,13 +76,13 @@ class UserController extends Controller
         ]);
         return redirect('loker')->with('status','Berhasil Menambahkan Lamaran!');
     }
-
+    
     function riwayat($siapa = ''){
         $perusahaan = Perusahaan::where('nisn', Auth()->guard('alumnis')->id())->get();
         return view('Alumni.riwayat', ['perusahaan' => $perusahaan, 'siapa' => $siapa]);
     }
 
-    function riwayat_alumni($siapa = ''){
+    function riwayat_lowongan($siapa = ''){
         $lowongan = Lowongan::where('nisn', Auth()->guard('alumnis')->id())->get();
         if ($siapa == 'me'){
            $lowongan = Lowongan::where('nisn', Auth::guard('alumnis')->user()->nisn)->get();

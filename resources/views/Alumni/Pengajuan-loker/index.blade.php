@@ -1,4 +1,5 @@
 @extends('Alumni.Landing-page.landing-page')
+@section('title','Lowongan Pekerjaan')
 @section('landing-page')
         <!-- ======= Lowongan Section ======= -->
         <section id="lowongan" class="lowongan">
@@ -61,7 +62,7 @@
                             </div>
                         </div> 
                         <a href="detail/{{ $item->id_lowongan }}"><input type="submit" value="Detail" class="btn btn-primary"></a>
-                        <a href="testimoni/alumni/add/{{ $item->id_lowongan }}"><input type="submit" value="Berikan Testimoni" class="btn btn-primary"></a>
+                        <a href="riwayat/testimoni/add/{{ $item->id_lowongan }}"><input type="submit" value="Berikan Testimoni" class="btn btn-primary"></a>
                       </div>
                     </div>
                   </div>

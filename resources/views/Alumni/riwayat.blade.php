@@ -1,4 +1,5 @@
 @extends('Alumni.Landing-page.landing-page')
+@section('title','Riwayat Perusahaan')
 @section('landing-page')
 <div class="container pt-5 mt-5">
     <div class="row">
@@ -21,7 +22,7 @@
                 <a class="d-inline tab {{ $siapa == 'me' ? 'tab-active' : ''}}" href="{{ url('/riwayat/lowongan', 'me') }}"><h5 class="text-primary">Riwayat Lowongan</h5></a>
             </div>
             <div class="col">
-                <a class="d-inline tab {{ $siapa != 'me' ? 'tab-active' : ''}}" href="{{ url('/testimoni/alumni') }}"><h5 class="text-primary">Testimoni</h5></a>
+                <a class="d-inline tab {{ $siapa != 'me' ? 'tab-active' : ''}}" href="{{ url('riwayat/testimoni') }}"><h5 class="text-primary">Testimoni</h5></a>
             </div>
         </div>
         <div class="col-md-12 mt-3">

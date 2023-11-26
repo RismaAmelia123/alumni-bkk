@@ -1,4 +1,5 @@
 @extends('Alumni.Landing-page.landing-page')
+@section('title','BKK - SMK YPC TASIKMALAYA')
 @section('landing-page')
 <section id="hero">
 

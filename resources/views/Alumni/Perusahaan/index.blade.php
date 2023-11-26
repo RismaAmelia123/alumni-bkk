@@ -1,4 +1,5 @@
 @extends('Alumni.Landing-page.landing-page')
+@section('title','Perusahaan')
 @section('landing-page')
         <!-- ======= Perusahaan Section ======= -->
         <section id="perusahaan" class="perusahaan">

@@ -1,4 +1,5 @@
 @extends('Alumni.Landing-page.landing-page')
+@section('title','BKK - Tambah Lowongan Pekerjaan')
 @section('landing-page')
     <div class="container pt-5 mt-5">
         <div class="row">

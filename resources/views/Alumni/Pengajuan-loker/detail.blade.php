@@ -1,4 +1,5 @@
 @extends('Alumni.Landing-page.landing-page')
+@section('title','BKK - Detail Lowongan Pekerjaan')
 @section('landing-page')
     <div class="container pt-5 mt-5">
         <div class="row">
@@ -34,7 +35,7 @@
                             </div>
                         </div>
                         <hr>
-                        <a href="/lamar/loker/{{ $lowongan->id_lowongan }}"><input type="submit" value="Lamar Pekerjaan" class="btn btn-primary" style="margin-left: 75%"></a>
+                        <a href="/lamar/loker/{{ $lowongan->id_lowongan }}"><input type="submit" value="Lamar Pekerjaan" class="btn btn-primary"></a>
                     </div>
                 </div>
             </div>
