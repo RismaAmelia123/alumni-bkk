@@ -53,8 +53,8 @@
                                             @endif
                                         </td>
                                         <td>
-                                        <a href="perusahaan/edit/{{ $item->id_perusahaan }}"><button type="button" class="btn btn-icon btn-outline-primary btn-sm mb-2"><i class="bx bx-edit-alt me-1"></button></i></a>
-                                        <a href="perusahaan/delete/{{ $item->id_perusahaan }}"><button type="button" class="btn btn-icon btn-outline-danger btn-sm" ><i class="bx bx-trash-alt"></button></i></a>
+                                        <a href="perusahaan/edit/{{ $item->id_perusahaan }}"><button type="button" class="btn btn-icon btn-outline-primary btn-sm mb-1"><i class="bx bx-edit-alt"></button></i></a>
+                                        <a href="perusahaan/delete/{{ $item->id_perusahaan }}"><button type="button" class="btn btn-icon btn-outline-danger btn-sm" onclick="return-window.confirm('Hapus Data Ini?')"><i class="bx bx-trash-alt"></button></i></a>
                                         </td>
                                     </tr>
                                     @endforeach

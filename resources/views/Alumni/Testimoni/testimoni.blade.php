@@ -13,7 +13,7 @@
                 <a class="d-inline tab {{ $siapa != 'me' ? 'tab-active' : ''}}" href="{{ url('riwayat') }}"><h5 class="text-primary">Riwayat Perusahaan</h5></a>
             </div>
             <div class="col-2">
-                <a class="d-inline tab {{ $siapa == 'me' ? 'tab-active' : ''}}" href="{{ url('riwayat/lowongan', 'me') }}"><h5 class="text-primary">Riwayat Lowongan</h5></a>
+                <a class="d-inline tab {{ $siapa == 'me' ? 'tab-active' : ''}}" href="{{ url('riwayat/lowongan') }}"><h5 class="text-primary">Riwayat Lowongan</h5></a>
             </div>
             <div class="col">
                 <a class="d-inline tab {{ $siapa != 'me' ? 'tab-active' : ''}}" href="{{ url('riwayat/testimoni') }}"><h5 class="text-primary">Testimoni</h5></a>

@@ -41,7 +41,7 @@
                                         <td>{{ $item->email }}</td>
                                         <td>{{ $item->kontak }}</td>
                                         <td>
-                                            <a href="admin/delete/{{ $item->id_admin }}"><button type="button" class="btn btn-icon btn-outline-danger btn-sm"><i class="bx bx-trash-alt"></button></i></a>
+                                            <a href="admin/delete/{{ $item->id_admin }}"><button type="button" class="btn btn-icon btn-outline-danger btn-sm" onclick="return-window.confirm('Hapus Data Ini?')"><i class="bx bx-trash-alt"></button></i></a>
                                         </td>
                                     </tr>
                                     @endforeach

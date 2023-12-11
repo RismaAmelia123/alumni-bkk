@@ -11,6 +11,8 @@
                             <tr>
                                 <th>No</th>
                                 <th>Alumni</th>
+                                <th>Lowongan</th>
+                                <th>Perusahaan</th>
                                 <th>Testimoni</th>
                                 <th>Aksi</th>
                             </tr>
@@ -20,9 +22,11 @@
                             <tr>
                                 <td>{{ $key+=1 }}</td>
                                 <td>{{ $item->alumni->nama_alumni }}</td>
+                                <td>{{ $item->lowongan->lowongan }}</td>
+                                <td>{{ $item->lowongan->perusahaan->perusahaan }}</td>
                                 <td>{{ $item->testimoni }}</td>
                                 <td>
-                                    <a href="testimoni/delete/{{ $item->id_testimoni }}"><button type="button" class="btn btn-icon btn-outline-danger btn-sm" ><i class="bx bx-trash-alt"></button></i></a>
+                                    <a href="testimoni/delete/{{ $item->id_testimoni }}"><button type="button" class="btn btn-icon btn-outline-danger btn-sm" onclick="return-window.confirm('Hapus Data Ini?')"><i class="bx bx-trash-alt"></button></i></a>
                                 </td>
                             </tr>
                             @endforeach

@@ -43,7 +43,7 @@ Route::middleware(['isAlumni'])->group(function (){
     Route::get('lamar/loker/{id}',[UserController::class,'add_lamaran']);
     Route::post('lamar/loker/{id}',[UserController::class,'create_lamaran']);
     Route::get('riwayat',[UserController::class,'riwayat']);
-    Route::get('riwayat/lowongan/{siapa}',[UserController::class,'riwayat_lowongan']);
+    Route::get('riwayat/lowongan',[UserController::class,'riwayat_lowongan']);
     Route::get('profile/alumni',[UserController::class,'profile']);
     Route::post('profile/alumni/{id}',[UserController::class,'profile_update']);
     Route::get('riwayat/testimoni',[UserController::class,'testimoni']);

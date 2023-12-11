@@ -55,4 +55,9 @@ class PerusahaanController extends Controller
         ]);
         return redirect('perusahaan')->with('status','Berhasil Mengubah Perusahaan!');
     }
+
+    function delete($id){
+        Perusahaan::where('id_perusahaan', $id)->delete();
+        return redirect('perusahaan');
+    }
 }

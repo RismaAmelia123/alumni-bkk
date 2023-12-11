@@ -88,7 +88,8 @@
               </a>
             </li>
             <!-- Lamaran Pekerjaan -->
-            <li class="menu-item {{ Request::segment(1) == 'lamaran'?'active':'' }}">
+            <li class="menu-item {{ Request::segment(1) == 'lamaran'?'active':'
+            ' }}">
               <a href="/lamaran" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-list-check"></i>
                 <div data-i18n="Lamaran Pekerjaan">Lamaran Pekerjaan</div>

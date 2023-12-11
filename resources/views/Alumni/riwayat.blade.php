@@ -15,13 +15,13 @@
             </div>
         </div>
         <div class="row mt-3">
-            <div class="col-2">
+            <div class="col-md-2">
                 <a class="d-inline tab {{ $siapa != 'me' ? 'tab-active' : ''}}" href="{{ url('/riwayat') }}"><h5 class="text-primary">Riwayat Perusahaan</h5></a>
             </div>
-            <div class="col-2">
-                <a class="d-inline tab {{ $siapa == 'me' ? 'tab-active' : ''}}" href="{{ url('/riwayat/lowongan', 'me') }}"><h5 class="text-primary">Riwayat Lowongan</h5></a>
+            <div class="col-md-2">
+                <a class="d-inline tab {{ $siapa == 'me' ? 'tab-active' : ''}}" href="{{ url('/riwayat/lowongan') }}"><h5 class="text-primary">Riwayat Lowongan</h5></a>
             </div>
-            <div class="col">
+            <div class="col-md-2">
                 <a class="d-inline tab {{ $siapa != 'me' ? 'tab-active' : ''}}" href="{{ url('riwayat/testimoni') }}"><h5 class="text-primary">Testimoni</h5></a>
             </div>
         </div>
@@ -47,7 +47,7 @@
                             </div>
                             <div class="col-md-1 mt-5">
                                 @if ($perusahaan->status == '0')
-                                    <a href="delete/perusahaan/{{ $perusahaan->id_perusahaan }}"><button type="button" class="btn btn-icon btn-outline-danger" ><i class="bx bx-trash-alt"></button></i></a>
+                                    <a href="delete/perusahaan/{{ $perusahaan->id_perusahaan }}"><button type="button" class="btn btn-icon btn-outline-danger" onclick="return-window.confirm('Hapus Data Ini?')"><i class="bx bx-trash-alt"></button></i></a>
                                 @else
                                     
                                 @endif

@@ -15,8 +15,8 @@ class DashboardController extends Controller
 {
     function index(){
         $data ['alumni'] = Alumni::all()->count();
-        $data ['perusahaan'] = Perusahaan::all()->count();
-        $data ['lowongan'] = Lowongan::all()->count();
+        $data ['perusahaan'] = Perusahaan::where('status','=','Posting')->count();
+        $data ['lowongan'] = Lowongan::where('status','=','Posting')->count();
         $data ['lamaran'] = Lamaran::all()->count();
         $data ['lamar'] = Lamaran::orderBy('id_lamaran', 'desc')->paginate(6);
         $data ['loker'] = Lowongan::orderBy('id_lowongan', 'desc')->where('status','=','Posting')->paginate(6);

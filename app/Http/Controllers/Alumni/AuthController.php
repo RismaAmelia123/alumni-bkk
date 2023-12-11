@@ -21,6 +21,8 @@ class AuthController extends Controller
         if(Auth::guard('alumnis')->attempt($credentials)){
             $request->session()->regenerate();
             return redirect('/');
+
+            
         }else{
             return redirect()->back()->with(['pesan' => 'Akun tidak terdaftar!']);
         }

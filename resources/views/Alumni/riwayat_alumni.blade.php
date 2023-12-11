@@ -19,7 +19,7 @@
                 <a class="d-inline tab {{ $siapa != 'me' ? 'tab-active' : ''}}" href="{{ url('/riwayat') }}"><h5 class="text-primary">Riwayat Perusahaan</h5></a>
             </div>
             <div class="col-2">
-                <a class="d-inline tab {{ $siapa == 'me' ? 'tab-active' : ''}}" href="{{ url('/riwayat/lowongan', 'me') }}"><h5 class="text-primary">Riwayat Lowongan</h5></a>
+                <a class="d-inline tab {{ $siapa == 'me' ? 'tab-active' : ''}}" href="{{ url('/riwayat/lowongan') }}"><h5 class="text-primary">Riwayat Lowongan</h5></a>
             </div>
             <div class="col">
                 <a class="d-inline tab {{ $siapa != 'me' ? 'tab-active' : ''}}" href="{{ url('riwayat/testimoni') }}"><h5 class="text-primary">Testimoni</h5></a>
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="col">
                                     @if ($lowongan->status == '0')
-                                        <a href="/loker/delete/{{ $lowongan->id_lowongan }}"><button type="button" class="btn btn-icon btn-outline-danger" ><i class="bx bx-trash-alt"></button></i></a>
+                                        <a href="/loker/delete/{{ $lowongan->id_lowongan }}"><button type="button" class="btn btn-icon btn-outline-danger btn-sm" onclick="return-window.confirm('Hapus Data Ini?')"><i class="bx bx-trash-alt"></button></i></a>
                                     @else
                                         
                                     @endif

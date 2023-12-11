@@ -14,7 +14,7 @@
                             <div class="card-body">
                               <h5 class="card-title text-primary">Selamat Datang {{ Auth::guard('admins')->user()->nama }} 🎉</h5>
                               <p class="mb-5">
-                                Bursa Kerja Khusus Sekolah Menengah Kejuruan Yayasan Pesantern Cintawana Tasikmalaya
+                                Bursa Kerja Khusus Sekolah Menengah Kejuruan Yayasan Pesantren Cintawana Tasikmalaya
                               </p>
                             </div>
                           </div>
@@ -33,7 +33,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="card-title d-flex align-items-start justify-content-between">
-                                            <span class="fw-semibold d-block mb-1">Alummi</span>
+                                            <span class="fw-semibold d-block mb-1">Alumni</span>
                                         </div>
                                       </div>
                                       <div class="col-auto">

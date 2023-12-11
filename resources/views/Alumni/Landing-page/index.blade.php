@@ -220,7 +220,7 @@
                     <div class="form-group mt-3">
                       <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
                     </div>
-                    <button type="submit" class="btn text-white" style="background-color: #696cff">Send Message</button></div>
+                    <button type="submit" class="btn text-white mt-2" style="background-color: #696cff">Send Message</button></div>
                   </form>
       
                 </div>

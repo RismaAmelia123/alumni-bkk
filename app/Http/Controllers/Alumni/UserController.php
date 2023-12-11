@@ -48,12 +48,12 @@ class UserController extends Controller
             'tgl_akhir' => $request->tgl_akhir,
             'status' => '0'
         ]);
-        return redirect('riwayat')->with('status','Berhasil Mengajukan Lowongan Pekerjaan!');
+        return redirect('riwayat/lowongan')->with('status','Berhasil Mengajukan Lowongan Pekerjaan!');
     }
 
     function delete_loker($id){
         Lowongan::where('id_lowongan', $id)->delete();
-        return redirect('riwayat');
+        return redirect('riwayat/lowongan');
     }
 
     function detail($id){
@@ -78,19 +78,19 @@ class UserController extends Controller
     }
     
     function riwayat($siapa = ''){
-        $perusahaan = Perusahaan::where('nisn', Auth()->guard('alumnis')->id())->get();
+        $perusahaan = Perusahaan::orderBy('id_perusahaan', 'desc')->where('nisn', Auth()->guard('alumnis')->id())->get();
         return view('Alumni.riwayat', ['perusahaan' => $perusahaan, 'siapa' => $siapa]);
     }
 
     function riwayat_lowongan($siapa = ''){
-        $lowongan = Lowongan::where('nisn', Auth()->guard('alumnis')->id())->get();
-        if ($siapa == 'me'){
-           $lowongan = Lowongan::where('nisn', Auth::guard('alumnis')->user()->nisn)->get();
+        $lowongan = Lowongan::orderBy('id_lowongan', 'desc')->where('nisn', Auth()->guard('alumnis')->id())->get();
+        // if ($siapa == 'me'){
+        //    $lowongan = Lowongan::where('nisn', Auth::guard('alumnis')->user()->nisn)->get();
+        // return view('Alumni.riwayat_alumni', ['lowongan' => $lowongan, 'siapa' => $siapa]);
+        // }else{
+        // $lowongan = Lowongan::where([['nisn', '!=', Auth::guard('alumnis')->user()->nisn]])->get();
+        // }
         return view('Alumni.riwayat_alumni', ['lowongan' => $lowongan, 'siapa' => $siapa]);
-        }else{
-        $lowongan = Lowongan::where([['nisn', '!=', Auth::guard('alumnis')->user()->nisn]])->get();
-        }
-        return view('Alumni.riwayat_alumni', ['lowongan' => $lowongan, 'siapa' => $siapa, 'perusahaan' => $perusahaan]);
     }
 
     function profile(){
